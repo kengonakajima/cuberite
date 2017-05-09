@@ -13,10 +13,10 @@
 
 
 
-cBoat::cBoat(double a_X, double a_Y, double a_Z) :
+cBoat::cBoat(double a_X, double a_Y, double a_Z, eBoatType a_BoatType) :
 	super(etBoat, a_X, a_Y, a_Z, 0.98, 0.7),
 	m_LastDamage(0), m_ForwardDirection(0),
-	m_DamageTaken(0.0f), m_Type(0),
+	m_DamageTaken(0.0f), m_Type(a_BoatType),
 	m_RightPaddleUsed(false), m_LeftPaddleUsed(false)
 {
 	SetMass(20.0f);

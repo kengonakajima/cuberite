@@ -94,8 +94,43 @@ public:
 			return false;
 		}
 
+		// Get the boat type
+		eBoatType BoatType = btOak;
+		switch (a_Player->GetEquippedItem().m_ItemType)
+		{
+			case E_ITEM_SPRUCE_BOAT:
+			{
+				BoatType = btSpruce;
+				break;
+			}
+			case E_ITEM_BIRCH_BOAT:
+			{
+				BoatType = btBirch;
+				break;
+			}
+			case E_ITEM_JUNGLE_BOAT:
+			{
+				BoatType = btJungle;
+				break;
+			}
+			case E_ITEM_ACACIA_BOAT:
+			{
+				BoatType = btAcacia;
+				break;
+			}
+			case E_ITEM_DARK_OAK_BOAT:
+			{
+				BoatType = btDarkOak;
+				break;
+			}
+			default:
+			{
+				break;
+			}
+		}
+
 		// Spawn block at water level
-		cBoat * Boat = new cBoat(x + 0.5, y + 0.5, z + 0.5);
+		cBoat * Boat = new cBoat(x + 0.5, y + 0.5, z + 0.5, BoatType);
 		if (!Boat->Initialize(*a_World))
 		{
 			delete Boat;

@@ -2902,6 +2902,11 @@ function OnAllChunksAvailable()</pre> All return values from the callbacks are i
 						Name = "Z",
 						Type = "number",
 					},
+					{
+						Name = "eBoatType",
+						Type = "number",
+						IsOptional = true,
+					},
 				},
 				Returns =
 				{
@@ -2910,7 +2915,7 @@ function OnAllChunksAvailable()</pre> All return values from the callbacks are i
 						Type = "number",
 					},
 				},
-				Notes = "Spawns a boat at the specific coordinates. Returns the EntityID of the new boat, or {{cEntity#INVALID_ID|cEntity#INVALID_ID}} if no boat was created.",
+				Notes = "Spawns a {{cBoat|boat}} at the specific coordinates, the boat type is optional (default 0). Returns the EntityID of the new boat, or {{cEntity#INVALID_ID|cEntity#INVALID_ID}} if no boat was created.",
 			},
 			SpawnExperienceOrb =
 			{

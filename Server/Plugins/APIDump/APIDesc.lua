@@ -11009,6 +11009,27 @@ a_Player:OpenWindow(Window);
 			},
 			Inherits = "cEntity",
 		},
+		cBoat =
+		{
+			Desc = [[
+				This class represents a boat. This entity can be spawned by using {{cWorld#SpawnBoat_1|cWorld:SpawnBoat}}.
+			]],
+			Functions =
+			{
+				GetType =
+				{
+					Returns =
+					{
+						{
+							Name = "eBoatType",
+							Type = "number",
+						},
+					},
+					Notes = "Returns the boat type. ",
+				},
+			},
+			Inherits = "cEntity",
+		},
 		cPickup =
 		{
 			Desc = [[
@@ -17143,6 +17164,13 @@ end
 			},
 			ConstantGroups =
 			{
+				eBoatType =
+				{
+					Include = "^bt.*",
+					TextBefore = [[
+						These constans are the different wood types of the boat.
+					]],
+				},
 				eBlockFace =
 				{
 					Include = "^BLOCK_FACE_.*",

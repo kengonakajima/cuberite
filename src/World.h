@@ -451,9 +451,9 @@ public:
 	Returns the UniqueID of the spawned minecart, or cEntity::INVALID_ID on failure. */
 	UInt32 SpawnMinecart(double a_X, double a_Y, double a_Z, int a_MinecartType, const cItem & a_Content = cItem(), int a_BlockHeight = 1);
 
-	/** Spawns a boat at the given coordinates.
+	/** Spawns a boat at the given coordinates. The type is the wood type of the boat.
 	Returns the UniqueID of the spawned boat, or cEntity::INVALID_ID on failure. */
-	UInt32 SpawnBoat(double a_X, double a_Y, double a_Z);
+	UInt32 SpawnBoat(double a_X, double a_Y, double a_Z, eBoatType a_BoatType = btOak);
 
 	/** Spawns an experience orb at the given location with the given reward.
 	Returns the UniqueID of the spawned experience orb, or cEntity::INVALID_ID on failure. */

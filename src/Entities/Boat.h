@@ -13,7 +13,7 @@
 
 
 
-
+// tolua_begin
 
 class cBoat :
 	public cEntity
@@ -21,6 +21,8 @@ class cBoat :
 	typedef cEntity super;
 
 public:
+	// tolua_end
+
 	CLASS_PROTODEF(cBoat)
 
 	// cEntity overrides:
@@ -30,14 +32,15 @@ public:
 	virtual void Tick(std::chrono::milliseconds a_Dt, cChunk & a_Chunk) override;
 	virtual void HandleSpeedFromAttachee(float a_Forward, float a_Sideways) override;
 
-	cBoat(double a_X, double a_Y, double a_Z);
+	/** The type is the wood type of the boat. There are five boat types (0 = oak, 1 = spruce, 2 = birch, 3 = jungle, 4 = acacia, 5 = dark oak) */
+	cBoat(double a_X, double a_Y, double a_Z, eBoatType a_BoatType = btOak);
 
 	int GetLastDamage(void) const { return m_LastDamage; }
 	int GetForwardDirection(void) const { return m_ForwardDirection; }
 
 	float GetDamageTaken(void) const { return m_DamageTaken; }
 
-	int GetType(void) const { return m_Type; }
+	int GetType(void) const { return m_Type; }  // tolua_export
 
 	bool IsRightPaddleUsed(void) const { return m_RightPaddleUsed; }
 	bool IsLeftPaddleUsed(void) const { return m_LeftPaddleUsed; }
@@ -56,4 +59,4 @@ private:
 
 	bool m_RightPaddleUsed;
 	bool m_LeftPaddleUsed;
-} ;
+} ;  // tolua_export

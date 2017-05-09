@@ -1160,6 +1160,20 @@ enum eSpreadSource
 	ssVineSpread,
 } ;
 
+
+
+
+
+enum eBoatType
+{
+	btOak,
+	btSpruce,
+	btBirch,
+	btJungle,
+	btAcacia,
+	btDarkOak
+} ;
+
 // tolua_end
 
 
