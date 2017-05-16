@@ -11028,6 +11028,41 @@ a_Player:OpenWindow(Window);
 					Notes = "Returns the boat type. ",
 				},
 			},
+			Constants =
+			{
+				btOak =
+				{
+					Notes = "",
+				},
+				btSpruce =
+				{
+					Notes = "",
+				},
+				btBirch =
+				{
+					Notes = "",
+				},
+				btJungle =
+				{
+					Notes = "",
+				},
+				btAcacia =
+				{
+					Notes = "",
+				},
+				btDarkOak =
+				{
+					Notes = "",
+				},
+			},
+			ConstantGroups =
+			{
+				eBoatType =
+				{
+					Include = "bt.*",
+					TextBefore = "These constans are the different wood types of the boat.",
+				},
+			},
 			Inherits = "cEntity",
 		},
 		cPickup =
